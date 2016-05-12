@@ -1,7 +1,7 @@
-APP          = JustTheTip
-PROJECT      = JustTheTip
-WORKSPACE    = JustTheTip
-SCHEME			 = JustTheTip
+APP          = YourAppName
+PROJECT      = YourAppName
+WORKSPACE    = YourAppName
+SCHEME			 = YourAppName
 
 PROJECT_ROOT = $(shell pwd)
 OUTPUT_DIR = "$(PROJECT_ROOT)/build"
