@@ -1,14 +1,14 @@
-APP          = YourAppName
-PROJECT      = YourAppName
-WORKSPACE    = YourAppName
-SCHEME			 = YourAppName
+APP                  = YourAppName
+PROJECT              = YourAppName
+WORKSPACE            = YourAppName
+SCHEME               = YourAppName
 
-PROJECT_ROOT = $(shell pwd)
-OUTPUT_DIR = "$(PROJECT_ROOT)/build"
+PROJECT_ROOT         = $(shell pwd)
+OUTPUT_DIR           = "$(PROJECT_ROOT)/build"
 
-CONFIG       ?= Debug
-DESTINATION  ?= "'platform=iOS Simulator,name=iPad 2'"
-CODE_SIGN_IDENTITY ?= "code signing identity that is exactly what xcode displays - escape the parens"
+CONFIG               ?= Debug
+DESTINATION          ?= "'platform=iOS Simulator,name=iPad 2'"
+CODE_SIGN_IDENTITY   ?= "code signing identity that is exactly what xcode displays - escape the parens"
 PROVISIONING_PROFILE ?= "full path to provisioning profile file"
 
 
