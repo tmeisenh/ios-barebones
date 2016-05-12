@@ -27,7 +27,7 @@ build: clean
 	@xcodebuild -workspace "$(WORKSPACE).xcworkspace" -scheme "$(SCHEME)" -configuration "$(CONFIG)" CONFIGURATION_BUILD_DIR="$(OUTPUT_DIR)" build | xcpretty -c
 
 test: build
-	@xcodebuild -workspace "$(WORKSPACE).xcworkspace" -scheme "$(SCHEME)" -configuration "$(CONFIG)" -destination "${DESTINATION}" test | xcpretty -c -r junit
+	@xcodebuild -workspace "$(WORKSPACE).xcworkspace" -scheme "$(SCHEME)" -configuration "$(CONFIG)" -destination "${DESTINATION}" CONFIGURATION_BUILD_DIR="$(OUTPUT_DIR) test | xcpretty -c -r junit
 
 sign:
 	@xcrun -sdk iphoneos PackageApplication -v "$(OUTPUT_DIR)/$(APP).app" -o "$(OUTPUT_DIR)/$(APP).ipa" --sign $(CODE_SIGN_IDENTITY)  --embed $(PROVISIONING_PROFILE)
